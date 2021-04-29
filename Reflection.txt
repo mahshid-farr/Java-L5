@@ -1,0 +1,18 @@
+In this lab I created a JSF web app using Tomcat.
+An index.xhtml page create a Coffee Shop online order in which user can choose a meal and its type.
+For example, the customer has the chance to select Breakfast Combo either with tea or coffee.
+Then, the user should choose the type her/his coffee or tea and its quantity. Then, the customers choose the way they want to receive their orde.
+After all, a confirmation message would pop up.
+
+First of all, I created a server with tomcat version 8 to test my app on localhost.
+Then< create an index.xhtml to manage above page. I chose to use a table in which its columns are meal, type, quantity and price and 
+its row is are filled with related information. Then, in the table for drop down rows, I used selectOneMenu to show various options. 
+Such as, tea type and coffee type. The quantity is a mandatory text box  which by default shows 0 and is going to fill in by customer and 
+if it left null a red error (set with style command to show errors in red color) has been shown on right side of the text to inform customer to fill the text box. (is check with required component)
+Also, there is a radio button which provide the opportunity to receive the item by delivery or Take out. I model this part with selectOneRadio
+in JSF. These radio buttons are mandatory to check, if it remains unchecked a red error has been shown under these option to remind customer
+to check one of these buttons."I check all of above validation with a java bean class called validationbean.java which has a quantity filed"
+
+At the end, when all the information inserted successfully there is submit button with place order value  when they click on this button
+they are been redirected to a confirmation page with a successful message "Thank you, your order is placed!"(set with style command to show message with yellow color)
+I modeled this part with another xhtml page named response and invoke this xhtml page in front of action part in submit button which indicate that after submit what which action should be done.
